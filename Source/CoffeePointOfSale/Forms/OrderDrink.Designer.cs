@@ -97,9 +97,11 @@
             this.btnAddToOrder.TabIndex = 3;
             this.btnAddToOrder.Text = "Add To Order";
             this.btnAddToOrder.UseVisualStyleBackColor = true;
+            this.btnAddToOrder.Click += new System.EventHandler(this.btnAddToOrder_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.labelQuantityNumber);
             this.panel1.Controls.Add(this.btnDecreaseQuantity);
             this.panel1.Controls.Add(this.btnIncreaseQuantity);
@@ -127,11 +129,10 @@
             // labelQuantityNumber
             // 
             this.labelQuantityNumber.AutoSize = true;
-            this.labelQuantityNumber.Location = new System.Drawing.Point(329, 290);
+            this.labelQuantityNumber.Location = new System.Drawing.Point(341, 361);
             this.labelQuantityNumber.Name = "labelQuantityNumber";
-            this.labelQuantityNumber.Size = new System.Drawing.Size(90, 25);
+            this.labelQuantityNumber.Size = new System.Drawing.Size(0, 25);
             this.labelQuantityNumber.TabIndex = 20;
-            this.labelQuantityNumber.Text = "(Quantity)";
             // 
             // btnDecreaseQuantity
             // 
@@ -141,6 +142,7 @@
             this.btnDecreaseQuantity.TabIndex = 19;
             this.btnDecreaseQuantity.Text = "-";
             this.btnDecreaseQuantity.UseVisualStyleBackColor = true;
+            this.btnDecreaseQuantity.Click += new System.EventHandler(this.btnDecreaseQuantity_Click);
             // 
             // btnIncreaseQuantity
             // 
@@ -150,11 +152,12 @@
             this.btnIncreaseQuantity.TabIndex = 18;
             this.btnIncreaseQuantity.Text = "+";
             this.btnIncreaseQuantity.UseVisualStyleBackColor = true;
+            this.btnIncreaseQuantity.Click += new System.EventHandler(this.btnIncreaseQuantity_Click);
             // 
             // LabelCustomizationsLeft
             // 
             this.LabelCustomizationsLeft.AutoSize = true;
-            this.LabelCustomizationsLeft.Location = new System.Drawing.Point(448, 340);
+            this.LabelCustomizationsLeft.Location = new System.Drawing.Point(418, 361);
             this.LabelCustomizationsLeft.Name = "LabelCustomizationsLeft";
             this.LabelCustomizationsLeft.Size = new System.Drawing.Size(134, 25);
             this.LabelCustomizationsLeft.TabIndex = 17;
@@ -165,18 +168,16 @@
             this.LabelSizeOfDrinkLeft.AutoSize = true;
             this.LabelSizeOfDrinkLeft.Location = new System.Drawing.Point(470, 315);
             this.LabelSizeOfDrinkLeft.Name = "LabelSizeOfDrinkLeft";
-            this.LabelSizeOfDrinkLeft.Size = new System.Drawing.Size(112, 25);
+            this.LabelSizeOfDrinkLeft.Size = new System.Drawing.Size(0, 25);
             this.LabelSizeOfDrinkLeft.TabIndex = 16;
-            this.LabelSizeOfDrinkLeft.Text = "Size of Drink";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(418, 290);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 25);
+            this.label5.Size = new System.Drawing.Size(0, 25);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Drink Here You Got";
             // 
             // btnLargeCupSize
             // 
@@ -275,6 +276,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
