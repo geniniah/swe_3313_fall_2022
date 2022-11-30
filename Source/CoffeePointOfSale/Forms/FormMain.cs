@@ -33,4 +33,9 @@ public partial class FormMain : FormBase
         Hide();
         FormFactory.Get<Customers>().Show();
     }
+
+    private void FormMain_Load(object sender, EventArgs e)
+    {
+
+    }
 }
