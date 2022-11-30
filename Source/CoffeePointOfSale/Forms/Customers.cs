@@ -51,7 +51,8 @@ namespace CoffeePointOfSale.Forms
                 last.Font = new Font("Calibri", 12);
                 last.Padding = new Padding(5);
 
-                this.Controls.Add(last);
+                this.tableLayoutPanel1.Controls.Add(last, 0, i);
+                //last.BringToFront();
 
                 Label first = new Label();
                 first.Name = "first" + i;
@@ -61,7 +62,7 @@ namespace CoffeePointOfSale.Forms
                 first.Font = new Font("Calibri", 12);
                 first.Padding = new Padding(5);
 
-                this.Controls.Add(first);
+                this.tableLayoutPanel1.Controls.Add(first, 1, i);
 
                 Label phone = new Label();
                 phone.Name = "phone" + i;
@@ -71,7 +72,8 @@ namespace CoffeePointOfSale.Forms
                 phone.Font = new Font("Calibri", 12);
                 phone.Padding = new Padding(5);
 
-                this.Controls.Add(phone);
+                this.tableLayoutPanel1.Controls.Add(phone, 2, i);
+                //phone.BringToFront();
 
                 Button OrderDrink = new Button();
                 OrderDrink.Name = "OrderDrink" + i;
@@ -82,7 +84,8 @@ namespace CoffeePointOfSale.Forms
                 OrderDrink.Padding = new Padding(5);
                 OrderDrink.Click += new System.EventHandler(OnClickBtnOrder);
 
-                this.Controls.Add(OrderDrink);
+                this.tableLayoutPanel1.Controls.Add(OrderDrink, 3, i);
+                //OrderDrink.BringToFront();
 
                 i++;
             }
