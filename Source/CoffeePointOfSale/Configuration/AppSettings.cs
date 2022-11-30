@@ -10,4 +10,6 @@ public class AppSettings : IAppSettings
     public Tax Tax { get; init; } = new();
 
     public Rewards Rewards { get; init; } = new();
+
+    public DrinkMenu DrinkMenu { get; init; } = new();
 }

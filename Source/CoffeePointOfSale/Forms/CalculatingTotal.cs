@@ -12,11 +12,13 @@ namespace CoffeePointOfSale.Forms
         private IAppSettings? _appSettings;
         private decimal _taxRate;
         private decimal _rewardPerDollar;
+        private string _latte;
         public CalculatingTotal(IAppSettings appSettings) 
         {
             _appSettings = appSettings;
             _rewardPerDollar = appSettings.Rewards.PointsPerDollar;
             _taxRate = appSettings.Tax.Rate;
+            _latte = appSettings.DrinkMenu.Name;
 
         }
     }

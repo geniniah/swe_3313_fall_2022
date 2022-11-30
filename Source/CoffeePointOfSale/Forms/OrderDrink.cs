@@ -13,11 +13,13 @@ using System.Windows.Forms;
 
 namespace CoffeePointOfSale.Forms
 {
+
     public partial class OrderDrink : FormNoCloseBase
     {
         private IAppSettings? _appSettings;
         private decimal _taxRate;
         private decimal _rewardPerDollar;
+        private string _latte;
         public OrderDrink()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace CoffeePointOfSale.Forms
             _appSettings = appSettings;
             _rewardPerDollar = appSettings.Rewards.PointsPerDollar;
             _taxRate = appSettings.Tax.Rate;
+            _latte = appSettings.DrinkMenu.Name;
 
         }
         private bool UpperRightPanelDrinkSize(bool status)
@@ -51,6 +54,8 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnGreenLatte);
             SelectedFalse(btnIcedWater);
             SelectedFalse(btnCoffee);
+            comboBoxCustomizations.Visible = false;
+            
         }
 
         private void UpperRightPanelQuantity(bool status)
@@ -165,6 +170,11 @@ namespace CoffeePointOfSale.Forms
             btnAddToOrder.Visible = false;
             labelQuantityNumber.Visible = false;
             btnPaymentOrderDrinkScreen.Visible = false;
+            comboBoxCustomizations.Visible = false;
+            string labellatte = _latte;
+            label7.Text = labellatte;
+
+
 
         }
 
@@ -178,6 +188,8 @@ namespace CoffeePointOfSale.Forms
             label8.Text = "Small";
             btnAddToOrder.Visible = true;
             labelQuantityNumber.Visible = true;
+            comboBoxCustomizations.Visible = true;
+
         }
 
         private void btnMediumCupSize_Click(object sender, EventArgs e)
@@ -190,6 +202,7 @@ namespace CoffeePointOfSale.Forms
             label8.Text = "Medium";
             btnAddToOrder.Visible = true;
             labelQuantityNumber.Visible = true;
+            comboBoxCustomizations.Visible = true;
         }
 
         private void btnLargeCupSize_Click(object sender, EventArgs e)
@@ -202,6 +215,7 @@ namespace CoffeePointOfSale.Forms
             label8.Text = "Large";
             btnAddToOrder.Visible = true;
             labelQuantityNumber.Visible = true;
+            comboBoxCustomizations.Visible = true;
 
             //Add
         }
@@ -229,6 +243,29 @@ namespace CoffeePointOfSale.Forms
         {
             btnPaymentOrderDrinkScreen.Visible = true;
             resetMenu();
+        }
+
+
+        private string comboBoxCustomizations_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string selected = comboBoxCustomizations.Items.GetType().Name;
+            return selected;
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
