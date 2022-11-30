@@ -34,5 +34,15 @@ namespace CoffeePointOfSale.Forms
             Close(); //closes this form
             FormFactory.Get<FormMain>().Show(); //re-opens the main form
         }
+
+        private void FormReceipt_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
