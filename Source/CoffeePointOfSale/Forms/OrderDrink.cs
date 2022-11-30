@@ -24,6 +24,7 @@ namespace CoffeePointOfSale.Forms
         private string _latte;
         private int amountDrinks = 0;
         public string[] OrderData;
+       
 
         public OrderDrink()
         {
@@ -173,7 +174,7 @@ namespace CoffeePointOfSale.Forms
         //OnLoad Method
         private void OrderDrink_Load(object sender, EventArgs e)
         {
-            // base.OnLoad();
+            
             UpperRightPanelDrinkSize(false);
             UpperRightPanelQuantity(false);
             btnAddToOrder.Visible = false;
@@ -183,9 +184,9 @@ namespace CoffeePointOfSale.Forms
             string labellatte = _latte;
             label7.Text = labellatte;
 
+             List<CalculatingTotal> list = new List<CalculatingTotal>();
 
-
-        }
+    }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -256,6 +257,7 @@ namespace CoffeePointOfSale.Forms
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
+
             OrderData = new string[6];
             string quantityLabel = labelQuantityNumber.Text;
             int quantity = Int16.Parse(quantityLabel);
@@ -290,10 +292,9 @@ namespace CoffeePointOfSale.Forms
 
             label9.Text = _orderInfo.getCustom();
 
+            _orderInfo.OrderData = OrderData;
 
-
-            resetMenu();
-
+          
         }
 
 
