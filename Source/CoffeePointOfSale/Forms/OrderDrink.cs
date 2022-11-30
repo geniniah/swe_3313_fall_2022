@@ -51,6 +51,12 @@ namespace CoffeePointOfSale.Forms
             FormFactory.Get<FormMain>().Show();
         }
 
+        private void btnProceedToPayment_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormFactory.Get<FormPayment>().Show();
+        }
+
 
 
 

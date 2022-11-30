@@ -20,7 +20,7 @@ public partial class FormManagement : FormNoCloseBase
     private void OnClickBtnClose(object sender, EventArgs e)
     {
         Close(); //closes this form
-        FormFactory.Get<FormAddCustomer>().Show(); //re-opens the main form
+        FormFactory.Get<FormMain>().Show(); //re-opens the main form
     }
 
     /// <summary>
