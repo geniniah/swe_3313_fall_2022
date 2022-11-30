@@ -33,26 +33,26 @@
             this.btnGreenLatte = new System.Windows.Forms.Button();
             this.btnAddToOrder = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCoffee = new System.Windows.Forms.Button();
-            this.btnIcedWater = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnMediumCupSize = new System.Windows.Forms.Button();
-            this.btnLargeCupSize = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LabelSizeOfDrinkLeft = new System.Windows.Forms.Label();
-            this.LabelCustomizationsLeft = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnIncreaseQuantity = new System.Windows.Forms.Button();
-            this.btnDecreaseQuantity = new System.Windows.Forms.Button();
             this.labelQuantityNumber = new System.Windows.Forms.Label();
+            this.btnDecreaseQuantity = new System.Windows.Forms.Button();
+            this.btnIncreaseQuantity = new System.Windows.Forms.Button();
+            this.LabelCustomizationsLeft = new System.Windows.Forms.Label();
+            this.LabelSizeOfDrinkLeft = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnLargeCupSize = new System.Windows.Forms.Button();
+            this.btnMediumCupSize = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnIcedWater = new System.Windows.Forms.Button();
+            this.btnCoffee = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnPaymentOrderDrinkScreen = new System.Windows.Forms.Button();
             this.btnCancelOrderDrinkScreen = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.btnLatte.TabIndex = 0;
             this.btnLatte.Text = "Select";
             this.btnLatte.UseVisualStyleBackColor = true;
-            
+            this.btnLatte.Click += new System.EventHandler(this.btnLatte_Click);
             // 
             // btnIcedLatte
             // 
@@ -77,6 +77,7 @@
             this.btnIcedLatte.TabIndex = 1;
             this.btnIcedLatte.Text = "Select";
             this.btnIcedLatte.UseVisualStyleBackColor = true;
+            this.btnIcedLatte.Click += new System.EventHandler(this.btnIcedLatte_Click);
             // 
             // btnGreenLatte
             // 
@@ -86,6 +87,7 @@
             this.btnGreenLatte.TabIndex = 2;
             this.btnGreenLatte.Text = "Select";
             this.btnGreenLatte.UseVisualStyleBackColor = true;
+            this.btnGreenLatte.Click += new System.EventHandler(this.btnGreenLatte_Click);
             // 
             // btnAddToOrder
             // 
@@ -122,59 +124,89 @@
             this.panel1.Size = new System.Drawing.Size(622, 527);
             this.panel1.TabIndex = 4;
             // 
-            // label1
+            // labelQuantityNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Latte";
+            this.labelQuantityNumber.AutoSize = true;
+            this.labelQuantityNumber.Location = new System.Drawing.Point(329, 290);
+            this.labelQuantityNumber.Name = "labelQuantityNumber";
+            this.labelQuantityNumber.Size = new System.Drawing.Size(90, 25);
+            this.labelQuantityNumber.TabIndex = 20;
+            this.labelQuantityNumber.Text = "(Quantity)";
             // 
-            // label2
+            // btnDecreaseQuantity
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Iced Latte";
+            this.btnDecreaseQuantity.Location = new System.Drawing.Point(253, 380);
+            this.btnDecreaseQuantity.Name = "btnDecreaseQuantity";
+            this.btnDecreaseQuantity.Size = new System.Drawing.Size(70, 65);
+            this.btnDecreaseQuantity.TabIndex = 19;
+            this.btnDecreaseQuantity.Text = "-";
+            this.btnDecreaseQuantity.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnIncreaseQuantity
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Iced Matcha Green Tea Latte";
+            this.btnIncreaseQuantity.Location = new System.Drawing.Point(253, 295);
+            this.btnIncreaseQuantity.Name = "btnIncreaseQuantity";
+            this.btnIncreaseQuantity.Size = new System.Drawing.Size(70, 65);
+            this.btnIncreaseQuantity.TabIndex = 18;
+            this.btnIncreaseQuantity.Text = "+";
+            this.btnIncreaseQuantity.UseVisualStyleBackColor = true;
             // 
-            // btnCoffee
+            // LabelCustomizationsLeft
             // 
-            this.btnCoffee.Location = new System.Drawing.Point(26, 170);
-            this.btnCoffee.Name = "btnCoffee";
-            this.btnCoffee.Size = new System.Drawing.Size(112, 65);
-            this.btnCoffee.TabIndex = 6;
-            this.btnCoffee.Text = "Select";
-            this.btnCoffee.UseVisualStyleBackColor = true;
+            this.LabelCustomizationsLeft.AutoSize = true;
+            this.LabelCustomizationsLeft.Location = new System.Drawing.Point(448, 340);
+            this.LabelCustomizationsLeft.Name = "LabelCustomizationsLeft";
+            this.LabelCustomizationsLeft.Size = new System.Drawing.Size(134, 25);
+            this.LabelCustomizationsLeft.TabIndex = 17;
+            this.LabelCustomizationsLeft.Text = "Customizations";
             // 
-            // btnIcedWater
+            // LabelSizeOfDrinkLeft
             // 
-            this.btnIcedWater.Location = new System.Drawing.Point(169, 170);
-            this.btnIcedWater.Name = "btnIcedWater";
-            this.btnIcedWater.Size = new System.Drawing.Size(112, 65);
-            this.btnIcedWater.TabIndex = 8;
-            this.btnIcedWater.Text = "Select";
-            this.btnIcedWater.UseVisualStyleBackColor = true;
+            this.LabelSizeOfDrinkLeft.AutoSize = true;
+            this.LabelSizeOfDrinkLeft.Location = new System.Drawing.Point(470, 315);
+            this.LabelSizeOfDrinkLeft.Name = "LabelSizeOfDrinkLeft";
+            this.LabelSizeOfDrinkLeft.Size = new System.Drawing.Size(112, 25);
+            this.LabelSizeOfDrinkLeft.TabIndex = 16;
+            this.LabelSizeOfDrinkLeft.Text = "Size of Drink";
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 25);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Coffee";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(418, 290);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 25);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Drink Here You Got";
+            // 
+            // btnLargeCupSize
+            // 
+            this.btnLargeCupSize.Location = new System.Drawing.Point(26, 432);
+            this.btnLargeCupSize.Name = "btnLargeCupSize";
+            this.btnLargeCupSize.Size = new System.Drawing.Size(112, 65);
+            this.btnLargeCupSize.TabIndex = 14;
+            this.btnLargeCupSize.Text = "L";
+            this.btnLargeCupSize.UseVisualStyleBackColor = true;
+            this.btnLargeCupSize.Click += new System.EventHandler(this.btnLargeCupSize_Click);
+            // 
+            // btnMediumCupSize
+            // 
+            this.btnMediumCupSize.Location = new System.Drawing.Point(26, 361);
+            this.btnMediumCupSize.Name = "btnMediumCupSize";
+            this.btnMediumCupSize.Size = new System.Drawing.Size(112, 65);
+            this.btnMediumCupSize.TabIndex = 13;
+            this.btnMediumCupSize.Text = "M";
+            this.btnMediumCupSize.UseVisualStyleBackColor = true;
+            this.btnMediumCupSize.Click += new System.EventHandler(this.btnMediumCupSize_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 290);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 65);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "S";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -185,60 +217,61 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Iced Water";
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(26, 290);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 65);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "S";
-            this.button1.UseVisualStyleBackColor = true;
-        
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Coffee";
             // 
-            // btnMediumCupSize
+            // btnIcedWater
             // 
-            this.btnMediumCupSize.Location = new System.Drawing.Point(26, 361);
-            this.btnMediumCupSize.Name = "btnMediumCupSize";
-            this.btnMediumCupSize.Size = new System.Drawing.Size(112, 65);
-            this.btnMediumCupSize.TabIndex = 13;
-            this.btnMediumCupSize.Text = "M";
-            this.btnMediumCupSize.UseVisualStyleBackColor = true;
+            this.btnIcedWater.Location = new System.Drawing.Point(169, 170);
+            this.btnIcedWater.Name = "btnIcedWater";
+            this.btnIcedWater.Size = new System.Drawing.Size(112, 65);
+            this.btnIcedWater.TabIndex = 8;
+            this.btnIcedWater.Text = "Select";
+            this.btnIcedWater.UseVisualStyleBackColor = true;
+            this.btnIcedWater.Click += new System.EventHandler(this.btnIcedWater_Click);
             // 
-            // btnLargeCupSize
+            // btnCoffee
             // 
-            this.btnLargeCupSize.Location = new System.Drawing.Point(26, 432);
-            this.btnLargeCupSize.Name = "btnLargeCupSize";
-            this.btnLargeCupSize.Size = new System.Drawing.Size(112, 65);
-            this.btnLargeCupSize.TabIndex = 14;
-            this.btnLargeCupSize.Text = "L";
-            this.btnLargeCupSize.UseVisualStyleBackColor = true;
+            this.btnCoffee.Location = new System.Drawing.Point(26, 170);
+            this.btnCoffee.Name = "btnCoffee";
+            this.btnCoffee.Size = new System.Drawing.Size(112, 65);
+            this.btnCoffee.TabIndex = 6;
+            this.btnCoffee.Text = "Select";
+            this.btnCoffee.UseVisualStyleBackColor = true;
+            this.btnCoffee.Click += new System.EventHandler(this.btnCoffee_Click);
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(418, 290);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Drink Here You Got";
-         
-            // LabelSizeOfDrinkLeft
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(300, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Iced Matcha Green Tea Latte";
             // 
-            this.LabelSizeOfDrinkLeft.AutoSize = true;
-            this.LabelSizeOfDrinkLeft.Location = new System.Drawing.Point(470, 315);
-            this.LabelSizeOfDrinkLeft.Name = "LabelSizeOfDrinkLeft";
-            this.LabelSizeOfDrinkLeft.Size = new System.Drawing.Size(112, 25);
-            this.LabelSizeOfDrinkLeft.TabIndex = 16;
-            this.LabelSizeOfDrinkLeft.Text = "Size of Drink";
+            // label2
             // 
-            // LabelCustomizationsLeft
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(182, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Iced Latte";
             // 
-            this.LabelCustomizationsLeft.AutoSize = true;
-            this.LabelCustomizationsLeft.Location = new System.Drawing.Point(448, 340);
-            this.LabelCustomizationsLeft.Name = "LabelCustomizationsLeft";
-            this.LabelCustomizationsLeft.Size = new System.Drawing.Size(134, 25);
-            this.LabelCustomizationsLeft.TabIndex = 17;
-            this.LabelCustomizationsLeft.Text = "Customizations";
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(56, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Latte";
             // 
             // panel2
             // 
@@ -250,14 +283,14 @@
             this.panel2.Size = new System.Drawing.Size(600, 527);
             this.panel2.TabIndex = 5;
             // 
-            // label7
+            // label9
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(33, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Drink Here You Got";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(108, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 25);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Customizations";
             // 
             // label8
             // 
@@ -268,41 +301,14 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Size of Drink";
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(108, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 25);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Customizations";
-            // 
-            // btnIncreaseQuantity
-            // 
-            this.btnIncreaseQuantity.Location = new System.Drawing.Point(253, 295);
-            this.btnIncreaseQuantity.Name = "btnIncreaseQuantity";
-            this.btnIncreaseQuantity.Size = new System.Drawing.Size(70, 65);
-            this.btnIncreaseQuantity.TabIndex = 18;
-            this.btnIncreaseQuantity.Text = "+";
-            this.btnIncreaseQuantity.UseVisualStyleBackColor = true;
-            // 
-            // btnDecreaseQuantity
-            // 
-            this.btnDecreaseQuantity.Location = new System.Drawing.Point(253, 380);
-            this.btnDecreaseQuantity.Name = "btnDecreaseQuantity";
-            this.btnDecreaseQuantity.Size = new System.Drawing.Size(70, 65);
-            this.btnDecreaseQuantity.TabIndex = 19;
-            this.btnDecreaseQuantity.Text = "-";
-            this.btnDecreaseQuantity.UseVisualStyleBackColor = true;
-            // 
-            // labelQuantityNumber
-            // 
-            this.labelQuantityNumber.AutoSize = true;
-            this.labelQuantityNumber.Location = new System.Drawing.Point(329, 290);
-            this.labelQuantityNumber.Name = "labelQuantityNumber";
-            this.labelQuantityNumber.Size = new System.Drawing.Size(90, 25);
-            this.labelQuantityNumber.TabIndex = 20;
-            this.labelQuantityNumber.Text = "(Quantity)";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Drink Here You Got";
             // 
             // btnPaymentOrderDrinkScreen
             // 
@@ -321,6 +327,7 @@
             this.btnCancelOrderDrinkScreen.TabIndex = 7;
             this.btnCancelOrderDrinkScreen.Text = "Cancel";
             this.btnCancelOrderDrinkScreen.UseVisualStyleBackColor = true;
+            this.btnCancelOrderDrinkScreen.Click += new System.EventHandler(this.btnCancelOrderDrinkScreen_Click);
             // 
             // OrderDrink
             // 
@@ -336,6 +343,7 @@
             this.Margin = new System.Windows.Forms.Padding(13, 22, 13, 22);
             this.Name = "OrderDrink";
             this.Text = "OrderDrink";
+            this.Load += new System.EventHandler(this.OrderDrink_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
