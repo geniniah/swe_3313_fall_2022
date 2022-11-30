@@ -77,9 +77,16 @@ namespace CoffeePointOfSale.Forms
         }
         private void btnRedeem_Click(object sender, EventArgs e)
         {
-            Globals.PayMethod = "point";
-            Close(); //closes this form
-            FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
+            if (Globals.IsAnonymous)
+            {
+
+            }
+            else
+            {
+                Globals.PayMethod = "point";
+                Close(); //closes this form
+                FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
+            }
         }
     }
 }

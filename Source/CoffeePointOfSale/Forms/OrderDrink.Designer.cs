@@ -443,6 +443,7 @@
             this.btnPaymentOrderDrinkScreen.TabIndex = 6;
             this.btnPaymentOrderDrinkScreen.Text = "Proceed To Payment";
             this.btnPaymentOrderDrinkScreen.UseVisualStyleBackColor = true;
+            this.btnPaymentOrderDrinkScreen.Click += new System.EventHandler(this.btnPaymentOrderDrinkScreen_Click);
             // 
             // btnCancelOrderDrinkScreen
             // 
