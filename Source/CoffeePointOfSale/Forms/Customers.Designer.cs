@@ -41,10 +41,10 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
-            this.btnClose.Location = new System.Drawing.Point(1151, 627);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnClose.Location = new System.Drawing.Point(1439, 784);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(117, 37);
+            this.btnClose.Size = new System.Drawing.Size(146, 46);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -54,10 +54,10 @@
             // 
             this.btnAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
             this.btnAddCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
-            this.btnAddCustomer.Location = new System.Drawing.Point(61, 627);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAddCustomer.Location = new System.Drawing.Point(76, 784);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(117, 37);
+            this.btnAddCustomer.Size = new System.Drawing.Size(146, 46);
             this.btnAddCustomer.TabIndex = 0;
             this.btnAddCustomer.Text = "Add Customer";
             this.btnAddCustomer.UseVisualStyleBackColor = false;
@@ -70,7 +70,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(97, 25);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(121, 31);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -83,7 +84,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1133, 596);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1416, 745);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Visible = false;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
@@ -92,10 +93,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-6, -12);
+            this.panel1.Location = new System.Drawing.Point(-8, -15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1395, 122);
+            this.panel1.Size = new System.Drawing.Size(1744, 152);
             this.panel1.TabIndex = 6;
+            
             // 
             // label1
             // 
@@ -103,24 +106,25 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
-            this.label1.Location = new System.Drawing.Point(44, 46);
+            this.label1.Location = new System.Drawing.Point(55, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 46);
+            this.label1.Size = new System.Drawing.Size(265, 54);
             this.label1.TabIndex = 3;
             this.label1.Text = "Customer List";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Customers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.ClientSize = new System.Drawing.Size(1685, 901);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCustomer);
-            this.Margin = new System.Windows.Forms.Padding(10, 18, 10, 18);
+            this.Margin = new System.Windows.Forms.Padding(12, 22, 12, 22);
             this.Name = "Customers";
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.OnLoadCustomers);

@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,9 +18,11 @@ namespace CoffeePointOfSale.Forms
     public partial class OrderDrink : FormNoCloseBase
     {
         private IAppSettings? _appSettings;
+       
         private decimal _taxRate;
         private decimal _rewardPerDollar;
         private string _latte;
+
         public OrderDrink()
         {
             InitializeComponent();
@@ -46,9 +49,7 @@ namespace CoffeePointOfSale.Forms
             UpperRightPanelDrinkSize(false);
             UpperRightPanelQuantity(false);
             quantityValue = 0;
-            label5.Text = "";
-            label7.Text = "";
-            label8.Text = "";
+           
             SelectedFalse(btnLatte);
             SelectedFalse(btnIcedLatte);
             SelectedFalse(btnGreenLatte);
@@ -174,7 +175,7 @@ namespace CoffeePointOfSale.Forms
             UpperRightPanelDrinkSize(false);
             UpperRightPanelQuantity(false);
             btnAddToOrder.Visible = false;
-            labelQuantityNumber.Visible = false;
+            labelQuantityNumber.Visible = true;
             btnPaymentOrderDrinkScreen.Visible = false;
             comboBoxCustomizations.Visible = false;
             string labellatte = _latte;
@@ -225,8 +226,10 @@ namespace CoffeePointOfSale.Forms
 
             //Add
         }
-        private int quantityValue = 0;
-        private string displayQuantityValue = "";
+
+       
+        private int quantityValue = 1;
+        private string displayQuantityValue = "1";
         private void btnIncreaseQuantity_Click(object sender, EventArgs e)
         {
             quantityValue += 1;
@@ -244,10 +247,35 @@ namespace CoffeePointOfSale.Forms
             displayQuantityValue = quantityValue.ToString();
             labelQuantityNumber.Text = displayQuantityValue;
         }
+        //Reads in values from Calculating Total
+        private CalculatingTotal _orderInfo;
 
+
+     
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
+            string quantityLabel = labelQuantityNumber.Text;
+            int quantity = Int16.Parse(quantityLabel);
+            _orderInfo = new CalculatingTotal();
+            _orderInfo.CalculateBaseDrinkPrice(label5.Text);
+            _orderInfo.CalculateSize(LabelSizeOfDrinkLeft.Text);
+            _orderInfo.CalculateCostCustom(LabelCustomizationsLeft.Text);
             btnPaymentOrderDrinkScreen.Visible = true;
+
+           
+
+            decimal subTotalPricelabel = _orderInfo.subTotalPrice(quantity);
+           
+            label13.Text = subTotalPricelabel.ToString();
+
+            decimal taxPricelabel = _orderInfo.calcTax();
+            label14.Text = taxPricelabel.ToString();
+
+            decimal totalPriceLabel = _orderInfo.totalPrice();
+            label15.Text = totalPriceLabel.ToString();
+
+            label9.Text = _orderInfo.getCustom();
+
             resetMenu();
         }
 
@@ -270,6 +298,11 @@ namespace CoffeePointOfSale.Forms
         }
 
         private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

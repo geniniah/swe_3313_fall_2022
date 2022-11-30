@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +8,25 @@ using System.Threading.Tasks;
 
 namespace CoffeePointOfSale.Forms
 {
-    internal class CalculatingTotal : OrderDrink
+     class CalculatingTotal : OrderDrink
     {
         private IAppSettings? _appSettings;
-        private decimal _taxRate;
+        private decimal _taxRate = 0.06m;
         private decimal _rewardPerDollar;
-        private decimal drinkCost;
-        private decimal drinkCostSize;
-        private decimal drinkCostCustom;
-        private decimal _subTotal;
-        private decimal _total;
-        private decimal _tax;
-        
-     
+        public decimal drinkCost;
+        public decimal drinkCostSize;
+        public decimal drinkCostCustom;
+        public decimal _subTotal;
+        public decimal _total;
+        public decimal _tax;
+        public decimal quantity1;
+        public string customization;
+
+        public CalculatingTotal()
+        {
+            
+
+        }
         public CalculatingTotal(IAppSettings appSettings) 
         {
             _appSettings = appSettings;
@@ -54,6 +61,12 @@ namespace CoffeePointOfSale.Forms
             return drinkCost;
         }
 
+        public string getCustom()
+        {
+            return customization;
+        }
+
+
         public decimal CalculateSize(string size)
         {
             if (size.Equals("S"))
@@ -76,45 +89,67 @@ namespace CoffeePointOfSale.Forms
 
         public decimal CalculateCostCustom(string custom)
         {
+           
             if (custom.Equals("Soy Milk"))
             {
                 drinkCostCustom = 1.50m;
+                customization = custom;
             }
             if (custom.Equals("Almond Milk"))
             {
                 drinkCostCustom = 1.50m;
+                customization = custom;
+
             }
             if (custom.Equals("Oat Milk"))
             {
                 drinkCostCustom = 1.50m;
+                customization = custom;
             }
             if (custom.Equals("Espresso"))
             {
                 drinkCostCustom = 1.25m;
+                customization = custom;
             }
+            if (custom.Equals("Select"))
+            {
+                drinkCostCustom = 0.00m;
+                customization = "";
+            }
+            else
+            {
+                drinkCostCustom = 0.00m;
+            }
+           
 
             return drinkCostCustom;
         }
 
-        public decimal totalPrice(string baseDrinkPrice, string size, string custom, int quantity)
+        public decimal totalPrice()
         {
             //Sales tax = list price * sales tax rate.
             //Total price including tax = list price + sales tax,
 
-            _subTotal = (CalculateBaseDrinkPrice(baseDrinkPrice) + CalculateSize(size) + CalculateCostCustom(custom)) * quantity;
-             _tax = _subTotal * _taxRate;
+            _subTotal = (drinkCost + drinkCostCustom + drinkCostSize) * quantity1;
+            _tax = _subTotal * _taxRate;
             _total = _subTotal + _tax;
 
             return _total;
             
         }
+        public decimal calcTax()
+        {
+            _tax = _subTotal * _taxRate;
+            return _tax;
+        }
 
-        public decimal subTotalPrice(string baseDrinkPrice, string size, string custom, int quantity)
+        public decimal subTotalPrice(int quantity)
         {
             //Sales tax = list price * sales tax rate.
             //Total price including tax = list price + sales tax,
+            quantity1 = quantity;
 
-            _subTotal = (CalculateBaseDrinkPrice(baseDrinkPrice) + CalculateSize(size) + CalculateCostCustom(custom)) * quantity;
+            _subTotal = (drinkCost + drinkCostCustom + drinkCostSize) * quantity;
             
 
             return _subTotal;
