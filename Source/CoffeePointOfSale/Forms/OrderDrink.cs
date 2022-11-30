@@ -256,7 +256,9 @@ namespace CoffeePointOfSale.Forms
         {
             string quantityLabel = labelQuantityNumber.Text;
             int quantity = Int16.Parse(quantityLabel);
+
             _orderInfo = new CalculatingTotal();
+
             _orderInfo.CalculateBaseDrinkPrice(label5.Text);
             _orderInfo.CalculateSize(LabelSizeOfDrinkLeft.Text);
             _orderInfo.CalculateCostCustom(LabelCustomizationsLeft.Text);
@@ -305,6 +307,11 @@ namespace CoffeePointOfSale.Forms
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPaymentOrderDrinkScreen_Click(object sender, EventArgs e)
+        {
+            FormFactory.Get<FormPayment>().Show();
         }
     }
 }

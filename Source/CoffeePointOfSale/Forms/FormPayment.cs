@@ -17,6 +17,8 @@ namespace CoffeePointOfSale.Forms
     public partial class FormPayment : Base.FormNoCloseBase
     {
         private IAppSettings _appSettings;
+        private CalculatingTotal _orderInfoPaymentScreen;
+    
         public FormPayment(IAppSettings appSettings) : this()
         {
             _appSettings = appSettings;
@@ -68,6 +70,16 @@ namespace CoffeePointOfSale.Forms
                 labError.Text = "You suck.";
                 //multiply total amount by 10 and if the user has that many reward points go to receipt screen otherwise keep it here.
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void getOrder()
+        {
 
         }
     }
