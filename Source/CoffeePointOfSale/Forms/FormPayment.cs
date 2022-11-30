@@ -29,6 +29,16 @@ namespace CoffeePointOfSale.Forms
 
         private void OnLoadFormPayment(object sender, EventArgs e)
         {
+            
+        }
+        private void OnClickBtnClose(object sender, EventArgs e)
+        {
+            Close(); //closes this form
+            FormFactory.Get<FormMain>().Show(); //re-opens the main form
+        }
+
+        private void FormPayment_Load(object sender, EventArgs e)
+        {
             if (Globals.IsAnonymous)
             {
                 labIsAnonymous.Text = "Anonymous";
@@ -40,15 +50,9 @@ namespace CoffeePointOfSale.Forms
                 btnRedeem.Enabled = true;
                 btnRedeem.Show();
             }
-        }
-        private void OnClickBtnClose(object sender, EventArgs e)
-        {
-            Close(); //closes this form
-            FormFactory.Get<FormMain>().Show(); //re-opens the main form
-        }
-
-        private void FormPayment_Load(object sender, EventArgs e)
-        {
+            labTotal.Text = labTotal.Text +" "+  Globals.Total;
+            labSubtotal.Text = labSubtotal.Text + " " + Globals.SubTotal;
+            labTax.Text = labTax.Text + " " + Globals.Tax;
 
         }
         static private bool CreditChanged = false;
@@ -64,6 +68,7 @@ namespace CoffeePointOfSale.Forms
                 if (detector.IsValid())
                 {
                     //Change to Reciept screen here
+                    Globals.CreditCard = txtBoxCreditCard.Text;
                     Globals.PayMethod = "credit";
                     Close(); //closes this form
                     FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
@@ -87,6 +92,11 @@ namespace CoffeePointOfSale.Forms
                 Close(); //closes this form
                 FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
             }
+        }
+
+        private void labRedeemableP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

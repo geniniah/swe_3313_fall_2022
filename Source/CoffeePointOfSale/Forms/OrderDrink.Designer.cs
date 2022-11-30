@@ -62,14 +62,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnPaymentOrderDrinkScreen = new System.Windows.Forms.Button();
             this.btnCancelOrderDrinkScreen = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labSubtotal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLatte
             // 
             this.btnLatte.Location = new System.Drawing.Point(21, 46);
-            this.btnLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnLatte.Name = "btnLatte";
             this.btnLatte.Size = new System.Drawing.Size(89, 52);
             this.btnLatte.TabIndex = 0;
@@ -80,7 +83,7 @@
             // btnIcedLatte
             // 
             this.btnIcedLatte.Location = new System.Drawing.Point(135, 46);
-            this.btnIcedLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIcedLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnIcedLatte.Name = "btnIcedLatte";
             this.btnIcedLatte.Size = new System.Drawing.Size(89, 52);
             this.btnIcedLatte.TabIndex = 1;
@@ -91,7 +94,7 @@
             // btnGreenLatte
             // 
             this.btnGreenLatte.Location = new System.Drawing.Point(273, 90);
-            this.btnGreenLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGreenLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnGreenLatte.Name = "btnGreenLatte";
             this.btnGreenLatte.Size = new System.Drawing.Size(89, 52);
             this.btnGreenLatte.TabIndex = 2;
@@ -101,8 +104,8 @@
             // 
             // btnAddToOrder
             // 
-            this.btnAddToOrder.Location = new System.Drawing.Point(27, 446);
-            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddToOrder.Location = new System.Drawing.Point(25, 552);
+            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddToOrder.Name = "btnAddToOrder";
             this.btnAddToOrder.Size = new System.Drawing.Size(497, 94);
             this.btnAddToOrder.TabIndex = 3;
@@ -112,7 +115,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
             this.panel1.Controls.Add(this.comboBoxCustomizations);
             this.panel1.Controls.Add(this.labelQuantityNumber);
             this.panel1.Controls.Add(this.btnDecreaseQuantity);
@@ -133,8 +136,8 @@
             this.panel1.Controls.Add(this.btnLatte);
             this.panel1.Controls.Add(this.btnGreenLatte);
             this.panel1.Controls.Add(this.btnIcedLatte);
-            this.panel1.Location = new System.Drawing.Point(27, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(25, 134);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 422);
             this.panel1.TabIndex = 4;
@@ -158,7 +161,7 @@
             "Extra Ice",
             "No Ice"});
             this.comboBoxCustomizations.Location = new System.Drawing.Point(319, 318);
-            this.comboBoxCustomizations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCustomizations.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCustomizations.Name = "comboBoxCustomizations";
             this.comboBoxCustomizations.Size = new System.Drawing.Size(147, 28);
             this.comboBoxCustomizations.TabIndex = 21;
@@ -176,7 +179,7 @@
             // btnDecreaseQuantity
             // 
             this.btnDecreaseQuantity.Location = new System.Drawing.Point(202, 304);
-            this.btnDecreaseQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDecreaseQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.btnDecreaseQuantity.Name = "btnDecreaseQuantity";
             this.btnDecreaseQuantity.Size = new System.Drawing.Size(56, 52);
             this.btnDecreaseQuantity.TabIndex = 19;
@@ -187,7 +190,7 @@
             // btnIncreaseQuantity
             // 
             this.btnIncreaseQuantity.Location = new System.Drawing.Point(202, 236);
-            this.btnIncreaseQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncreaseQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.btnIncreaseQuantity.Name = "btnIncreaseQuantity";
             this.btnIncreaseQuantity.Size = new System.Drawing.Size(56, 52);
             this.btnIncreaseQuantity.TabIndex = 18;
@@ -226,7 +229,7 @@
             // btnLargeCupSize
             // 
             this.btnLargeCupSize.Location = new System.Drawing.Point(21, 346);
-            this.btnLargeCupSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLargeCupSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnLargeCupSize.Name = "btnLargeCupSize";
             this.btnLargeCupSize.Size = new System.Drawing.Size(89, 52);
             this.btnLargeCupSize.TabIndex = 14;
@@ -237,7 +240,7 @@
             // btnMediumCupSize
             // 
             this.btnMediumCupSize.Location = new System.Drawing.Point(21, 290);
-            this.btnMediumCupSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMediumCupSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMediumCupSize.Name = "btnMediumCupSize";
             this.btnMediumCupSize.Size = new System.Drawing.Size(89, 52);
             this.btnMediumCupSize.TabIndex = 13;
@@ -248,7 +251,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(21, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 52);
             this.button1.TabIndex = 12;
@@ -279,7 +282,7 @@
             // btnIcedWater
             // 
             this.btnIcedWater.Location = new System.Drawing.Point(135, 136);
-            this.btnIcedWater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIcedWater.Margin = new System.Windows.Forms.Padding(2);
             this.btnIcedWater.Name = "btnIcedWater";
             this.btnIcedWater.Size = new System.Drawing.Size(89, 52);
             this.btnIcedWater.TabIndex = 8;
@@ -290,7 +293,7 @@
             // btnCoffee
             // 
             this.btnCoffee.Location = new System.Drawing.Point(21, 136);
-            this.btnCoffee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCoffee.Margin = new System.Windows.Forms.Padding(2);
             this.btnCoffee.Name = "btnCoffee";
             this.btnCoffee.Size = new System.Drawing.Size(89, 52);
             this.btnCoffee.TabIndex = 6;
@@ -330,7 +333,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
@@ -340,8 +343,8 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(571, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(569, 134);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(480, 422);
             this.panel2.TabIndex = 5;
@@ -349,7 +352,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(357, 362);
+            this.label15.Location = new System.Drawing.Point(379, 362);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(36, 20);
             this.label15.TabIndex = 24;
@@ -359,7 +362,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(347, 322);
+            this.label14.Location = new System.Drawing.Point(379, 322);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 20);
             this.label14.TabIndex = 23;
@@ -377,7 +380,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(313, 362);
+            this.label12.Location = new System.Drawing.Point(301, 362);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 21;
@@ -386,7 +389,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(313, 322);
+            this.label11.Location = new System.Drawing.Point(301, 322);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 20);
             this.label11.TabIndex = 20;
@@ -396,7 +399,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(313, 290);
+            this.label10.Location = new System.Drawing.Point(301, 290);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 20);
             this.label10.TabIndex = 19;
@@ -436,8 +439,8 @@
             // 
             // btnPaymentOrderDrinkScreen
             // 
-            this.btnPaymentOrderDrinkScreen.Location = new System.Drawing.Point(571, 446);
-            this.btnPaymentOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPaymentOrderDrinkScreen.Location = new System.Drawing.Point(683, 560);
+            this.btnPaymentOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2);
             this.btnPaymentOrderDrinkScreen.Name = "btnPaymentOrderDrinkScreen";
             this.btnPaymentOrderDrinkScreen.Size = new System.Drawing.Size(241, 94);
             this.btnPaymentOrderDrinkScreen.TabIndex = 6;
@@ -447,8 +450,8 @@
             // 
             // btnCancelOrderDrinkScreen
             // 
-            this.btnCancelOrderDrinkScreen.Location = new System.Drawing.Point(809, 446);
-            this.btnCancelOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelOrderDrinkScreen.Location = new System.Drawing.Point(1043, 586);
+            this.btnCancelOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelOrderDrinkScreen.Name = "btnCancelOrderDrinkScreen";
             this.btnCancelOrderDrinkScreen.Size = new System.Drawing.Size(241, 94);
             this.btnCancelOrderDrinkScreen.TabIndex = 7;
@@ -456,12 +459,34 @@
             this.btnCancelOrderDrinkScreen.UseVisualStyleBackColor = true;
             this.btnCancelOrderDrinkScreen.Click += new System.EventHandler(this.btnCancelOrderDrinkScreen_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
+            this.panel3.Controls.Add(this.labSubtotal);
+            this.panel3.Location = new System.Drawing.Point(-5, -8);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1364, 107);
+            this.panel3.TabIndex = 8;
+            // 
+            // labSubtotal
+            // 
+            this.labSubtotal.AutoSize = true;
+            this.labSubtotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
+            this.labSubtotal.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.labSubtotal.Location = new System.Drawing.Point(51, 35);
+            this.labSubtotal.Name = "labSubtotal";
+            this.labSubtotal.Size = new System.Drawing.Size(293, 46);
+            this.labSubtotal.TabIndex = 7;
+            this.labSubtotal.Text = "Order Drink Menu";
+            // 
             // OrderDrink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCancelOrderDrinkScreen);
             this.Controls.Add(this.btnPaymentOrderDrinkScreen);
             this.Controls.Add(this.panel2);
@@ -475,6 +500,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -515,5 +542,7 @@
         private Label label14;
         private Label label13;
         private Label label12;
+        private Panel panel3;
+        private Label labSubtotal;
     }
 }

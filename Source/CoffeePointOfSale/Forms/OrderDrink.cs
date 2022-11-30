@@ -261,18 +261,22 @@ namespace CoffeePointOfSale.Forms
             _orderInfo.CalculateSize(LabelSizeOfDrinkLeft.Text);
             _orderInfo.CalculateCostCustom(LabelCustomizationsLeft.Text);
             btnPaymentOrderDrinkScreen.Visible = true;
-
+            Globals.Drink = "Quantity: "+ quantityLabel + " Drink: " + label5.Text;
+            Globals.Custimizations = "Size: "+ LabelSizeOfDrinkLeft.Text +" Custimizations: "+ LabelCustomizationsLeft.Text;
            
 
             decimal subTotalPricelabel = _orderInfo.subTotalPrice(quantity);
            
             label13.Text = subTotalPricelabel.ToString();
+            Globals.SubTotal = label13.Text;
 
             decimal taxPricelabel = _orderInfo.calcTax();
             label14.Text = taxPricelabel.ToString();
+            Globals.Tax = label14.Text;
 
             decimal totalPriceLabel = _orderInfo.totalPrice();
             label15.Text = totalPriceLabel.ToString();
+            Globals.Total = label15.Text;
 
             label9.Text = _orderInfo.getCustom();
 

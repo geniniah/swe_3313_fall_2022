@@ -295,9 +295,9 @@
             this.labTotalPointC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
             this.labTotalPointC.Location = new System.Drawing.Point(14, 112);
             this.labTotalPointC.Name = "labTotalPointC";
-            this.labTotalPointC.Size = new System.Drawing.Size(230, 40);
+            this.labTotalPointC.Size = new System.Drawing.Size(238, 40);
             this.labTotalPointC.TabIndex = 14;
-            this.labTotalPointC.Text = "Total Point Cost :";
+            this.labTotalPointC.Text = "Total Point Cost : ";
             // 
             // labRedeemableP
             // 
@@ -310,6 +310,7 @@
             this.labRedeemableP.Size = new System.Drawing.Size(273, 40);
             this.labRedeemableP.TabIndex = 13;
             this.labRedeemableP.Text = "Redeemable Points :";
+            this.labRedeemableP.Click += new System.EventHandler(this.labRedeemableP_Click);
             // 
             // btnRedeem
             // 

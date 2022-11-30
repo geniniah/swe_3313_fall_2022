@@ -27,16 +27,31 @@ namespace CoffeePointOfSale.Forms
 
         private void OnLoadFormReceipt(object sender, EventArgs e)
         {
-
+             
         }
         private void OnClickBtnClose(object sender, EventArgs e)
         {
+            Globals.CreditCard = string.Empty;
+            Globals.Drink = string.Empty;
+            Globals.Tax = string.Empty;
+            Globals.Total = string.Empty;
+            Globals.SubTotal = string.Empty;
+            Globals.IsAnonymous = false;
+            Globals.Custimizations = string.Empty;
+            Globals.PayMethod = string.Empty;
             Close(); //closes this form
             FormFactory.Get<FormMain>().Show(); //re-opens the main form
         }
 
         private void FormReceipt_Load(object sender, EventArgs e)
         {
+            labCardNum.Text = labCardNum.Text + Globals.CreditCard;
+            labSizeCust.Text = Globals.Custimizations;
+            labSubTotal.Text = labSubTotal.Text + Globals.SubTotal;
+            labTax.Text = labTax.Text +Globals.Tax;
+            labTotal.Text = labTotal.Text + Globals.Total;
+            labDrinkQuantity.Text = Globals.Drink;
+
             if (Globals.IsAnonymous)
             {
                 labPaymentMeth.Text = labPaymentMeth.Text + "Credit Card";
@@ -44,7 +59,8 @@ namespace CoffeePointOfSale.Forms
             }
             else
             {
-                if(Globals.PayMethod == "credit")
+                labCustID.Text = labCustID.Text + "1";
+                if (Globals.PayMethod == "credit")
                 {
                     labPaymentMeth.Text = labPaymentMeth.Text + "Credit Card";
                 }
