@@ -31,54 +31,90 @@ sealed partial class FormMain
             this.btnManagement = new System.Windows.Forms.Button();
             this.btnOrderDrink = new System.Windows.Forms.Button();
             this.btnCustomerList = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnManagement
             // 
-            this.btnManagement.Location = new System.Drawing.Point(237, 404);
-            this.btnManagement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.btnManagement.ForeColor = System.Drawing.Color.White;
+            this.btnManagement.Location = new System.Drawing.Point(256, 391);
+            this.btnManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagement.Name = "btnManagement";
-            this.btnManagement.Size = new System.Drawing.Size(200, 71);
+            this.btnManagement.Size = new System.Drawing.Size(256, 140);
             this.btnManagement.TabIndex = 0;
             this.btnManagement.Text = "Management";
-            this.btnManagement.UseVisualStyleBackColor = true;
+            this.btnManagement.UseVisualStyleBackColor = false;
             this.btnManagement.Click += new System.EventHandler(this.OnClickBtnManagement);
             // 
             // btnOrderDrink
             // 
-            this.btnOrderDrink.Location = new System.Drawing.Point(590, 404);
+            this.btnOrderDrink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.btnOrderDrink.ForeColor = System.Drawing.Color.White;
+            this.btnOrderDrink.Location = new System.Drawing.Point(517, 391);
+            this.btnOrderDrink.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderDrink.Name = "btnOrderDrink";
-            this.btnOrderDrink.Size = new System.Drawing.Size(175, 71);
+            this.btnOrderDrink.Size = new System.Drawing.Size(262, 140);
             this.btnOrderDrink.TabIndex = 1;
             this.btnOrderDrink.Text = "Order Drink";
-            this.btnOrderDrink.UseVisualStyleBackColor = true;
+            this.btnOrderDrink.UseVisualStyleBackColor = false;
             this.btnOrderDrink.Click += new System.EventHandler(this.btnOrderDrink_Click);
             // 
             // btnCustomerList
             // 
-            this.btnCustomerList.Location = new System.Drawing.Point(933, 404);
+            this.btnCustomerList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.btnCustomerList.ForeColor = System.Drawing.Color.White;
+            this.btnCustomerList.Location = new System.Drawing.Point(783, 391);
+            this.btnCustomerList.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerList.Name = "btnCustomerList";
-            this.btnCustomerList.Size = new System.Drawing.Size(175, 71);
+            this.btnCustomerList.Size = new System.Drawing.Size(282, 140);
             this.btnCustomerList.TabIndex = 2;
             this.btnCustomerList.Text = "Customer List";
-            this.btnCustomerList.UseVisualStyleBackColor = true;
+            this.btnCustomerList.UseVisualStyleBackColor = false;
             this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.label1.Location = new System.Drawing.Point(44, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 46);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Main Menu";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-3, -4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1354, 130);
+            this.panel1.TabIndex = 4;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
+            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCustomerList);
             this.Controls.Add(this.btnOrderDrink);
             this.Controls.Add(this.btnManagement);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.Text = "Form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormMainClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
     }
@@ -88,4 +124,6 @@ sealed partial class FormMain
     private Button btnManagement;
     private Button btnOrderDrink;
     private Button btnCustomerList;
+    private Label label1;
+    private Panel panel1;
 }
