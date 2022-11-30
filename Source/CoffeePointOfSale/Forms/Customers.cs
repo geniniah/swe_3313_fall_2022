@@ -52,7 +52,7 @@ namespace CoffeePointOfSale.Forms
                 last.Padding = new Padding(5);
 
                 this.tableLayoutPanel1.Controls.Add(last, 0, i);
-                //last.BringToFront();
+                // last.BringToFront();
 
                 Label first = new Label();
                 first.Name = "first" + i;
@@ -73,7 +73,7 @@ namespace CoffeePointOfSale.Forms
                 phone.Padding = new Padding(5);
 
                 this.tableLayoutPanel1.Controls.Add(phone, 2, i);
-                //phone.BringToFront();
+                // phone.BringToFront();
 
                 Button OrderDrink = new Button();
                 OrderDrink.Name = "OrderDrink" + i;
@@ -85,7 +85,7 @@ namespace CoffeePointOfSale.Forms
                 OrderDrink.Click += new System.EventHandler(OnClickBtnOrder);
 
                 this.tableLayoutPanel1.Controls.Add(OrderDrink, 3, i);
-                //OrderDrink.BringToFront();
+                // OrderDrink.BringToFront();
 
                 i++;
             }

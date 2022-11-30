@@ -48,7 +48,7 @@ namespace CoffeePointOfSale.Forms
         }
         private void BtnCreditCard_Click(object sender, EventArgs e)
         {
-            if (CreditChanged)
+            if ((CreditChanged) && (txtBoxCreditCard.Text != string.Empty))
             {
                 CreditCardDetector detector = new CreditCardDetector(txtBoxCreditCard.Text);
                 if (detector.IsValid())
@@ -63,12 +63,11 @@ namespace CoffeePointOfSale.Forms
                     labError.Text = "Please enter a valid credit card.";
                 }
             }
-            else
-            {
-                labError.Text = "You suck.";
-                //multiply total amount by 10 and if the user has that many reward points go to receipt screen otherwise keep it here.
-            }
-
+        }
+        private void btnRedeem_Click(object sender, EventArgs e)
+        {
+            Close(); //closes this form
+            FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
         }
     }
 }
