@@ -25,6 +25,7 @@ public partial class FormMain : FormBase
     private void btnOrderDrink_Click(object sender, EventArgs e)
     {
         Hide();
+        Globals.IsAnonymous = true;
         FormFactory.Get<OrderDrink>().Show();
     }
 

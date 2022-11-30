@@ -34,7 +34,7 @@
             this.labError = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labIsAnonymous = new System.Windows.Forms.Label();
             this.labCustStat = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,24 +113,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.labIsAnonymous);
             this.panel3.Controls.Add(this.labCustStat);
             this.panel3.Location = new System.Drawing.Point(810, 18);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(532, 95);
             this.panel3.TabIndex = 12;
             // 
-            // label2
+            // labIsAnonymous
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
-            this.label2.Location = new System.Drawing.Point(309, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 46);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Existing";
+            this.labIsAnonymous.AutoSize = true;
+            this.labIsAnonymous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(164)))), ((int)(((byte)(151)))));
+            this.labIsAnonymous.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labIsAnonymous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.labIsAnonymous.Location = new System.Drawing.Point(309, 28);
+            this.labIsAnonymous.Name = "labIsAnonymous";
+            this.labIsAnonymous.Size = new System.Drawing.Size(134, 46);
+            this.labIsAnonymous.TabIndex = 7;
+            this.labIsAnonymous.Text = "Existing";
             // 
             // labCustStat
             // 
@@ -377,7 +377,7 @@
         private Label labTotal;
         private Panel panel3;
         private Label labCustStat;
-        private Label label2;
+        private Label labIsAnonymous;
         private Panel panel4;
         private Label label1;
         private Label label3;

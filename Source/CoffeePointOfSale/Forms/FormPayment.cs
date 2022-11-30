@@ -29,7 +29,16 @@ namespace CoffeePointOfSale.Forms
 
         private void OnLoadFormPayment(object sender, EventArgs e)
         {
-
+            if (Globals.IsAnonymous)
+            {
+                btnRedeem.Enabled = false;
+                btnRedeem.Hide();
+            }
+            else
+            {
+                btnRedeem.Enabled = true;
+                btnRedeem.Show();
+            }
         }
         private void OnClickBtnClose(object sender, EventArgs e)
         {

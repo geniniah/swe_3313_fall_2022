@@ -5,4 +5,5 @@ public interface IAppSettings
     App App { get; init; }
     Tax Tax { get; init; }
     Rewards Rewards { get; init; }
+    DrinkMenu DrinkMenu { get; init; }
 }
