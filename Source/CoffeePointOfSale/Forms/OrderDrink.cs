@@ -256,7 +256,7 @@ namespace CoffeePointOfSale.Forms
 
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
-            OrderData = new string[3];
+            OrderData = new string[6];
             string quantityLabel = labelQuantityNumber.Text;
             int quantity = Int16.Parse(quantityLabel);
 
@@ -278,12 +278,15 @@ namespace CoffeePointOfSale.Forms
             decimal subTotalPricelabel = _orderInfo.subTotalPrice(quantity);
            
             label13.Text = subTotalPricelabel.ToString();
+            OrderData[3] = label13.Text;
 
             decimal taxPricelabel = _orderInfo.calcTax();
             label14.Text = taxPricelabel.ToString();
+            OrderData[4] = label14.Text;
 
             decimal totalPriceLabel = _orderInfo.totalPrice();
             label15.Text = totalPriceLabel.ToString();
+            OrderData[5] = label15.Text;
 
             label9.Text = _orderInfo.getCustom();
 
