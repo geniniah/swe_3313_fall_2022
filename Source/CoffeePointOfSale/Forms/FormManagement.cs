@@ -20,7 +20,7 @@ public partial class FormManagement : FormNoCloseBase
     private void OnClickBtnClose(object sender, EventArgs e)
     {
         Close(); //closes this form
-        FormFactory.Get<FormAddCustomer>().Show(); //re-opens the main form
+        FormFactory.Get<FormMain>().Show(); //re-opens the main form
     }
 
     /// <summary>
@@ -39,5 +39,15 @@ public partial class FormManagement : FormNoCloseBase
     private void OnLoadFormManagement(object sender, EventArgs e)
     {
         DemonstrateGettingCustomerList();
+    }
+
+    private void panel1_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
     }
 }
