@@ -62,6 +62,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnPaymentOrderDrinkScreen = new System.Windows.Forms.Button();
             this.btnCancelOrderDrinkScreen = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             // btnLatte
             // 
             this.btnLatte.Location = new System.Drawing.Point(18, 34);
-            this.btnLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnLatte.Name = "btnLatte";
             this.btnLatte.Size = new System.Drawing.Size(78, 39);
             this.btnLatte.TabIndex = 0;
@@ -80,7 +81,7 @@
             // btnIcedLatte
             // 
             this.btnIcedLatte.Location = new System.Drawing.Point(118, 34);
-            this.btnIcedLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIcedLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnIcedLatte.Name = "btnIcedLatte";
             this.btnIcedLatte.Size = new System.Drawing.Size(78, 39);
             this.btnIcedLatte.TabIndex = 1;
@@ -91,7 +92,7 @@
             // btnGreenLatte
             // 
             this.btnGreenLatte.Location = new System.Drawing.Point(239, 67);
-            this.btnGreenLatte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGreenLatte.Margin = new System.Windows.Forms.Padding(2);
             this.btnGreenLatte.Name = "btnGreenLatte";
             this.btnGreenLatte.Size = new System.Drawing.Size(78, 39);
             this.btnGreenLatte.TabIndex = 2;
@@ -102,7 +103,7 @@
             // btnAddToOrder
             // 
             this.btnAddToOrder.Location = new System.Drawing.Point(24, 334);
-            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddToOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddToOrder.Name = "btnAddToOrder";
             this.btnAddToOrder.Size = new System.Drawing.Size(435, 70);
             this.btnAddToOrder.TabIndex = 3;
@@ -134,7 +135,7 @@
             this.panel1.Controls.Add(this.btnGreenLatte);
             this.panel1.Controls.Add(this.btnIcedLatte);
             this.panel1.Location = new System.Drawing.Point(24, 21);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(435, 316);
             this.panel1.TabIndex = 4;
@@ -158,7 +159,7 @@
             "Extra Ice",
             "No Ice"});
             this.comboBoxCustomizations.Location = new System.Drawing.Point(279, 238);
-            this.comboBoxCustomizations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCustomizations.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCustomizations.Name = "comboBoxCustomizations";
             this.comboBoxCustomizations.Size = new System.Drawing.Size(129, 23);
             this.comboBoxCustomizations.TabIndex = 21;
@@ -176,7 +177,7 @@
             // btnDecreaseQuantity
             // 
             this.btnDecreaseQuantity.Location = new System.Drawing.Point(177, 228);
-            this.btnDecreaseQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDecreaseQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.btnDecreaseQuantity.Name = "btnDecreaseQuantity";
             this.btnDecreaseQuantity.Size = new System.Drawing.Size(49, 39);
             this.btnDecreaseQuantity.TabIndex = 19;
@@ -187,7 +188,7 @@
             // btnIncreaseQuantity
             // 
             this.btnIncreaseQuantity.Location = new System.Drawing.Point(177, 177);
-            this.btnIncreaseQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncreaseQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.btnIncreaseQuantity.Name = "btnIncreaseQuantity";
             this.btnIncreaseQuantity.Size = new System.Drawing.Size(49, 39);
             this.btnIncreaseQuantity.TabIndex = 18;
@@ -226,7 +227,7 @@
             // btnLargeCupSize
             // 
             this.btnLargeCupSize.Location = new System.Drawing.Point(18, 259);
-            this.btnLargeCupSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLargeCupSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnLargeCupSize.Name = "btnLargeCupSize";
             this.btnLargeCupSize.Size = new System.Drawing.Size(78, 39);
             this.btnLargeCupSize.TabIndex = 14;
@@ -237,7 +238,7 @@
             // btnMediumCupSize
             // 
             this.btnMediumCupSize.Location = new System.Drawing.Point(18, 217);
-            this.btnMediumCupSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMediumCupSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMediumCupSize.Name = "btnMediumCupSize";
             this.btnMediumCupSize.Size = new System.Drawing.Size(78, 39);
             this.btnMediumCupSize.TabIndex = 13;
@@ -248,7 +249,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(18, 174);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 39);
             this.button1.TabIndex = 12;
@@ -279,7 +280,7 @@
             // btnIcedWater
             // 
             this.btnIcedWater.Location = new System.Drawing.Point(118, 102);
-            this.btnIcedWater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIcedWater.Margin = new System.Windows.Forms.Padding(2);
             this.btnIcedWater.Name = "btnIcedWater";
             this.btnIcedWater.Size = new System.Drawing.Size(78, 39);
             this.btnIcedWater.TabIndex = 8;
@@ -290,7 +291,7 @@
             // btnCoffee
             // 
             this.btnCoffee.Location = new System.Drawing.Point(18, 102);
-            this.btnCoffee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCoffee.Margin = new System.Windows.Forms.Padding(2);
             this.btnCoffee.Name = "btnCoffee";
             this.btnCoffee.Size = new System.Drawing.Size(78, 39);
             this.btnCoffee.TabIndex = 6;
@@ -330,18 +331,19 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(500, 21);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(420, 316);
             this.panel2.TabIndex = 5;
@@ -437,7 +439,7 @@
             // btnPaymentOrderDrinkScreen
             // 
             this.btnPaymentOrderDrinkScreen.Location = new System.Drawing.Point(500, 334);
-            this.btnPaymentOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPaymentOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2);
             this.btnPaymentOrderDrinkScreen.Name = "btnPaymentOrderDrinkScreen";
             this.btnPaymentOrderDrinkScreen.Size = new System.Drawing.Size(211, 70);
             this.btnPaymentOrderDrinkScreen.TabIndex = 6;
@@ -448,13 +450,20 @@
             // btnCancelOrderDrinkScreen
             // 
             this.btnCancelOrderDrinkScreen.Location = new System.Drawing.Point(708, 334);
-            this.btnCancelOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelOrderDrinkScreen.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelOrderDrinkScreen.Name = "btnCancelOrderDrinkScreen";
             this.btnCancelOrderDrinkScreen.Size = new System.Drawing.Size(211, 70);
             this.btnCancelOrderDrinkScreen.TabIndex = 7;
             this.btnCancelOrderDrinkScreen.Text = "Cancel";
             this.btnCancelOrderDrinkScreen.UseVisualStyleBackColor = true;
             this.btnCancelOrderDrinkScreen.Click += new System.EventHandler(this.btnCancelOrderDrinkScreen_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(220, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 162);
+            this.panel3.TabIndex = 25;
             // 
             // OrderDrink
             // 
@@ -464,9 +473,9 @@
             this.ClientSize = new System.Drawing.Size(956, 461);
             this.Controls.Add(this.btnCancelOrderDrinkScreen);
             this.Controls.Add(this.btnPaymentOrderDrinkScreen);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnAddToOrder);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(9, 13, 9, 13);
             this.Name = "OrderDrink";
             this.Text = "OrderDrink";
@@ -515,5 +524,6 @@
         private Label label14;
         private Label label13;
         private Label label12;
+        private Panel panel3;
     }
 }

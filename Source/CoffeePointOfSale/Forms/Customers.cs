@@ -46,43 +46,46 @@ namespace CoffeePointOfSale.Forms
                 Label last = new Label();
                 last.Name = "last" + i;
                 last.Text = last_data;
-                last.Location = new Point(97, 78 + (i * 53));
+                last.Location = new Point(217, 226 + (i * 50));
                 last.AutoSize= true;
                 last.Font = new Font("Calibri", 12);
                 last.Padding = new Padding(5);
 
-                this.Controls.Add(last);
+                this.tableLayoutPanel1.Controls.Add(last, 0, i);
+                // last.BringToFront();
 
                 Label first = new Label();
                 first.Name = "first" + i;
                 first.Text = first_data;
-                first.Location = new Point(374, 78 + (i * 53));
+                first.Location = new Point(494, 226 + (i * 50));
                 first.AutoSize = true;
                 first.Font = new Font("Calibri", 12);
                 first.Padding = new Padding(5);
 
-                this.Controls.Add(first);
+                this.tableLayoutPanel1.Controls.Add(first, 1, i);
 
                 Label phone = new Label();
                 phone.Name = "phone" + i;
                 phone.Text = phone_data;
-                phone.Location = new Point(651, 78 + (i * 53));
+                phone.Location = new Point(771, 226 + (i * 50));
                 phone.AutoSize = true;
                 phone.Font = new Font("Calibri", 12);
                 phone.Padding = new Padding(5);
 
-                this.Controls.Add(phone);
+                this.tableLayoutPanel1.Controls.Add(phone, 2, i);
+                // phone.BringToFront();
 
                 Button OrderDrink = new Button();
                 OrderDrink.Name = "OrderDrink" + i;
                 OrderDrink.Text = "Order Drink";
-                OrderDrink.Location = new Point(928, 78 + (i * 53));
+                OrderDrink.Location = new Point(1048, 226 + (i * 50));
                 OrderDrink.Size = new System.Drawing.Size(277, 53);
                 OrderDrink.Font = new Font("Calibri", 12);
                 OrderDrink.Padding = new Padding(5);
                 OrderDrink.Click += new System.EventHandler(OnClickBtnOrder);
 
-                this.Controls.Add(OrderDrink);
+                this.tableLayoutPanel1.Controls.Add(OrderDrink, 3, i);
+                // OrderDrink.BringToFront();
 
                 i++;
             }
@@ -103,7 +106,6 @@ namespace CoffeePointOfSale.Forms
             Close(); //closes this form
             FormFactory.Get<FormAddCustomer>().Show(); //opens add customer form
         }
-
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
@@ -113,7 +115,5 @@ namespace CoffeePointOfSale.Forms
         {
 
         }
-
-
     }
 }

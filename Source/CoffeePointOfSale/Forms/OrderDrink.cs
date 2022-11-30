@@ -18,10 +18,12 @@ namespace CoffeePointOfSale.Forms
     public partial class OrderDrink : FormNoCloseBase
     {
         private IAppSettings? _appSettings;
-       
+
         private decimal _taxRate;
         private decimal _rewardPerDollar;
         private string _latte;
+        private int amountDrinks = 0;
+        public string[] OrderData;
 
         public OrderDrink()
         {
@@ -251,17 +253,24 @@ namespace CoffeePointOfSale.Forms
         private CalculatingTotal _orderInfo;
 
 
-     
+
         private void btnAddToOrder_Click(object sender, EventArgs e)
         {
+            OrderData = new string[3];
             string quantityLabel = labelQuantityNumber.Text;
             int quantity = Int16.Parse(quantityLabel);
 
             _orderInfo = new CalculatingTotal();
 
             _orderInfo.CalculateBaseDrinkPrice(label5.Text);
+            string drink = label5.Text;
+            OrderData[0] = drink;
             _orderInfo.CalculateSize(LabelSizeOfDrinkLeft.Text);
+            string drinkSize = LabelSizeOfDrinkLeft.Text;
+            OrderData[1] = drinkSize;
             _orderInfo.CalculateCostCustom(LabelCustomizationsLeft.Text);
+            string drinkCustom = LabelCustomizationsLeft.Text;
+            OrderData[2] = drinkCustom;
             btnPaymentOrderDrinkScreen.Visible = true;
 
            
@@ -278,7 +287,10 @@ namespace CoffeePointOfSale.Forms
 
             label9.Text = _orderInfo.getCustom();
 
+
+
             resetMenu();
+
         }
 
 
@@ -312,6 +324,11 @@ namespace CoffeePointOfSale.Forms
         private void btnPaymentOrderDrinkScreen_Click(object sender, EventArgs e)
         {
             FormFactory.Get<FormPayment>().Show();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
