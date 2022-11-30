@@ -80,19 +80,19 @@ namespace CoffeePointOfSale.Forms
 
 
         //Activating Methods with Click Events 
-        private Button SelectedTrue(Button button)
+        private void SelectedTrue(Button button)
         {
             button.Text = "Selected";
             button.BackColor = Color.Gray;
-            return button;
+           
 
         }
 
-        private Button SelectedFalse(Button button)
+        private void SelectedFalse(Button button)
         {
             button.Text = "Select";
             button.BackColor = Color.White;
-            return button;
+          
         }
 
        
