@@ -35,7 +35,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Margin = new System.Windows.Forms.Padding(13, 22, 13, 22);
             this.Name = "Customers";
             this.Text = "Customers";

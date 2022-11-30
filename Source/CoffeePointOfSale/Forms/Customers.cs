@@ -27,5 +27,9 @@ namespace CoffeePointOfSale.Forms
             _rewardPerDollar = appSettings.Rewards.PointsPerDollar;
             _taxRate = appSettings.Tax.Rate;
         }
+        private void OnLoadCustomers(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

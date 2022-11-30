@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Forms.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CoffeePointOfSale.Forms
 {
-    public partial class OrderDrink : Form
+    public partial class OrderDrink : FormNoCloseBase
     {
         private IAppSettings? _appSettings;
         private decimal _taxRate;

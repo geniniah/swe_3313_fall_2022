@@ -29,26 +29,50 @@ sealed partial class FormMain
     private void InitializeComponent()
     {
             this.btnManagement = new System.Windows.Forms.Button();
+            this.btnOrderDrink = new System.Windows.Forms.Button();
+            this.btnCustomerList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManagement
             // 
-            this.btnManagement.Location = new System.Drawing.Point(46, 40);
-            this.btnManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnManagement.Location = new System.Drawing.Point(237, 404);
+            this.btnManagement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnManagement.Name = "btnManagement";
-            this.btnManagement.Size = new System.Drawing.Size(140, 22);
+            this.btnManagement.Size = new System.Drawing.Size(200, 71);
             this.btnManagement.TabIndex = 0;
             this.btnManagement.Text = "Management";
             this.btnManagement.UseVisualStyleBackColor = true;
             this.btnManagement.Click += new System.EventHandler(this.OnClickBtnManagement);
             // 
+            // btnOrderDrink
+            // 
+            this.btnOrderDrink.Location = new System.Drawing.Point(590, 404);
+            this.btnOrderDrink.Name = "btnOrderDrink";
+            this.btnOrderDrink.Size = new System.Drawing.Size(175, 71);
+            this.btnOrderDrink.TabIndex = 1;
+            this.btnOrderDrink.Text = "Order Drink";
+            this.btnOrderDrink.UseVisualStyleBackColor = true;
+            this.btnOrderDrink.Click += new System.EventHandler(this.btnOrderDrink_Click);
+            // 
+            // btnCustomerList
+            // 
+            this.btnCustomerList.Location = new System.Drawing.Point(933, 404);
+            this.btnCustomerList.Name = "btnCustomerList";
+            this.btnCustomerList.Size = new System.Drawing.Size(175, 71);
+            this.btnCustomerList.TabIndex = 2;
+            this.btnCustomerList.Text = "Customer List";
+            this.btnCustomerList.UseVisualStyleBackColor = true;
+            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.Controls.Add(this.btnCustomerList);
+            this.Controls.Add(this.btnOrderDrink);
             this.Controls.Add(this.btnManagement);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
@@ -61,4 +85,6 @@ sealed partial class FormMain
     #endregion
 
     private Button btnManagement;
+    private Button btnOrderDrink;
+    private Button btnCustomerList;
 }
