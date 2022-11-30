@@ -31,6 +31,7 @@ namespace CoffeePointOfSale.Forms
         {
             if (Globals.IsAnonymous)
             {
+                labIsAnonymous.Text = "Anonymous";
                 btnRedeem.Enabled = false;
                 btnRedeem.Hide();
             }
