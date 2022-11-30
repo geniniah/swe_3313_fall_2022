@@ -38,6 +38,20 @@ namespace CoffeePointOfSale.Forms
 
             return status;
         }
+        private void resetMenu()
+        {
+            UpperRightPanelDrinkSize(false);
+            UpperRightPanelQuantity(false);
+            quantityValue = 0;
+            label5.Text = "";
+            label7.Text = "";
+            label8.Text = "";
+            SelectedFalse(btnLatte);
+            SelectedFalse(btnIcedLatte);
+            SelectedFalse(btnGreenLatte);
+            SelectedFalse(btnIcedWater);
+            SelectedFalse(btnCoffee);
+        }
 
         private void UpperRightPanelQuantity(bool status)
         {
@@ -86,8 +100,10 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnIcedWater);
             UpperRightPanelDrinkSize(true);
             label5.Text = label1.Text;
+            label7.Text = label1.Text;
 
-            
+
+
         }
 
         private void btnIcedLatte_Click(object sender, EventArgs e)
@@ -98,7 +114,8 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnGreenLatte);
             SelectedFalse(btnIcedWater);
             UpperRightPanelDrinkSize(true);
-            LabelSizeOfDrinkLeft.Text = label2.Text;
+            label5.Text = label2.Text;
+            label7.Text = label2.Text;
 
 
         }
@@ -111,8 +128,10 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnLatte);
             SelectedFalse(btnIcedWater);
             UpperRightPanelDrinkSize(true);
+            label5.Text = label3.Text;
+            label7.Text = label3.Text;
 
-            
+
         }
 
         private void btnCoffee_Click(object sender, EventArgs e)
@@ -123,7 +142,9 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnGreenLatte);
             SelectedFalse(btnIcedWater);
             UpperRightPanelDrinkSize(true);
-            
+            label5.Text = label4.Text;
+            label7.Text = label4.Text;
+
         }
 
         private void btnIcedWater_Click(object sender, EventArgs e)
@@ -134,15 +155,23 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(btnGreenLatte);
             SelectedFalse(btnLatte);
             UpperRightPanelDrinkSize(true);
-            
+            label5.Text = label6.Text;
+            label7.Text = label6.Text;
+
         }
 
        
 
+        //OnLoad Method
         private void OrderDrink_Load(object sender, EventArgs e)
         {
+            // base.OnLoad();
             UpperRightPanelDrinkSize(false);
             UpperRightPanelQuantity(false);
+            btnAddToOrder.Visible = false;
+            labelQuantityNumber.Visible = false;
+            btnPaymentOrderDrinkScreen.Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,6 +180,10 @@ namespace CoffeePointOfSale.Forms
             SelectedTrue(button1);
             SelectedFalse(btnMediumCupSize);
             SelectedFalse(btnLargeCupSize);
+            LabelSizeOfDrinkLeft.Text = "Small";
+            label8.Text = "Small";
+            btnAddToOrder.Visible = true;
+            labelQuantityNumber.Visible = true;
         }
 
         private void btnMediumCupSize_Click(object sender, EventArgs e)
@@ -159,6 +192,10 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(button1);
             SelectedTrue(btnMediumCupSize);
             SelectedFalse(btnLargeCupSize);
+            LabelSizeOfDrinkLeft.Text = "Medium";
+            label8.Text = "Medium";
+            btnAddToOrder.Visible = true;
+            labelQuantityNumber.Visible = true;
         }
 
         private void btnLargeCupSize_Click(object sender, EventArgs e)
@@ -167,8 +204,37 @@ namespace CoffeePointOfSale.Forms
             SelectedFalse(button1);
             SelectedFalse(btnMediumCupSize);
             SelectedTrue(btnLargeCupSize);
+            LabelSizeOfDrinkLeft.Text = "Large";
+            label8.Text = "Large";
+            btnAddToOrder.Visible = true;
+            labelQuantityNumber.Visible = true;
 
             //Add
+        }
+        private int quantityValue = 0;
+        private string displayQuantityValue = "";
+        private void btnIncreaseQuantity_Click(object sender, EventArgs e)
+        {
+            quantityValue += 1;
+            displayQuantityValue = quantityValue.ToString();
+            labelQuantityNumber.Text = displayQuantityValue;
+        }
+
+        private void btnDecreaseQuantity_Click(object sender, EventArgs e)
+        {
+            quantityValue -= 1;
+            if (quantityValue < 0)
+            {
+                quantityValue = 0;
+            }
+            displayQuantityValue = quantityValue.ToString();
+            labelQuantityNumber.Text = displayQuantityValue;
+        }
+
+        private void btnAddToOrder_Click(object sender, EventArgs e)
+        {
+            btnPaymentOrderDrinkScreen.Visible = true;
+            resetMenu();
         }
     }
 }
