@@ -9,5 +9,6 @@ namespace CoffeePointOfSale.Forms
     public static class Globals
     {
         public static bool IsAnonymous = false;
+        public static string PayMethod = "";
     }
 }

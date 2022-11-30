@@ -64,6 +64,7 @@ namespace CoffeePointOfSale.Forms
                 if (detector.IsValid())
                 {
                     //Change to Reciept screen here
+                    Globals.PayMethod = "credit";
                     Close(); //closes this form
                     FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
                 }
@@ -76,6 +77,7 @@ namespace CoffeePointOfSale.Forms
         }
         private void btnRedeem_Click(object sender, EventArgs e)
         {
+            Globals.PayMethod = "point";
             Close(); //closes this form
             FormFactory.Get<FormReceipt>().Show(); //re-opens the main form
         }

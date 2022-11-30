@@ -32,7 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labCustID = new System.Windows.Forms.Label();
+            this.labPaymentMeth = new System.Windows.Forms.Label();
+            this.labCardNum = new System.Windows.Forms.Label();
+            this.labTotal = new System.Windows.Forms.Label();
+            this.labTax = new System.Windows.Forms.Label();
+            this.labSubTotal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -73,10 +80,73 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.labCustID);
+            this.panel2.Controls.Add(this.labPaymentMeth);
+            this.panel2.Controls.Add(this.labCardNum);
+            this.panel2.Controls.Add(this.labTotal);
+            this.panel2.Controls.Add(this.labTax);
+            this.panel2.Controls.Add(this.labSubTotal);
             this.panel2.Location = new System.Drawing.Point(442, 136);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(511, 507);
             this.panel2.TabIndex = 6;
+            // 
+            // labCustID
+            // 
+            this.labCustID.AutoSize = true;
+            this.labCustID.Location = new System.Drawing.Point(50, 380);
+            this.labCustID.Name = "labCustID";
+            this.labCustID.Size = new System.Drawing.Size(97, 20);
+            this.labCustID.TabIndex = 5;
+            this.labCustID.Text = "CustomerID -";
+            // 
+            // labPaymentMeth
+            // 
+            this.labPaymentMeth.AutoSize = true;
+            this.labPaymentMeth.Location = new System.Drawing.Point(50, 423);
+            this.labPaymentMeth.Name = "labPaymentMeth";
+            this.labPaymentMeth.Size = new System.Drawing.Size(135, 20);
+            this.labPaymentMeth.TabIndex = 4;
+            this.labPaymentMeth.Text = "Payment Method - ";
+            // 
+            // labCardNum
+            // 
+            this.labCardNum.AutoSize = true;
+            this.labCardNum.Location = new System.Drawing.Point(50, 465);
+            this.labCardNum.Name = "labCardNum";
+            this.labCardNum.Size = new System.Drawing.Size(108, 20);
+            this.labCardNum.TabIndex = 3;
+            this.labCardNum.Text = "Card Number -";
+            // 
+            // labTotal
+            // 
+            this.labTotal.AutoSize = true;
+            this.labTotal.Location = new System.Drawing.Point(50, 325);
+            this.labTotal.Name = "labTotal";
+            this.labTotal.Size = new System.Drawing.Size(52, 20);
+            this.labTotal.TabIndex = 2;
+            this.labTotal.Text = "Total -";
+            this.labTotal.Click += new System.EventHandler(this.labTotal_Click);
+            // 
+            // labTax
+            // 
+            this.labTax.AutoSize = true;
+            this.labTax.Location = new System.Drawing.Point(50, 276);
+            this.labTax.Name = "labTax";
+            this.labTax.Size = new System.Drawing.Size(40, 20);
+            this.labTax.TabIndex = 1;
+            this.labTax.Text = "Tax -";
+            this.labTax.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // labSubTotal
+            // 
+            this.labSubTotal.AutoSize = true;
+            this.labSubTotal.Location = new System.Drawing.Point(50, 230);
+            this.labSubTotal.Name = "labSubTotal";
+            this.labSubTotal.Size = new System.Drawing.Size(75, 20);
+            this.labSubTotal.TabIndex = 0;
+            this.labSubTotal.Text = "Subtotal -";
+            this.labSubTotal.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormReceipt
             // 
@@ -93,6 +163,8 @@
             this.Load += new System.EventHandler(this.FormReceipt_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -102,5 +174,11 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
+        private Label labTax;
+        private Label labSubTotal;
+        private Label labTotal;
+        private Label labCustID;
+        private Label labPaymentMeth;
+        private Label labCardNum;
     }
 }

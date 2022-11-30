@@ -37,10 +37,40 @@ namespace CoffeePointOfSale.Forms
 
         private void FormReceipt_Load(object sender, EventArgs e)
         {
-
+            if (Globals.IsAnonymous)
+            {
+                labPaymentMeth.Text = labPaymentMeth.Text + "Credit Card";
+                labCustID.Text = labCustID.Text + "0";
+            }
+            else
+            {
+                if(Globals.PayMethod == "credit")
+                {
+                    labPaymentMeth.Text = labPaymentMeth.Text + "Credit Card";
+                }
+                else
+                {
+                    labPaymentMeth.Text = labPaymentMeth.Text + "Reward Points";
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labTotal_Click(object sender, EventArgs e)
         {
 
         }
