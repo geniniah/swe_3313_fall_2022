@@ -1,0 +1,12 @@
+{
+  "Customers": {
+    "anonymous": {
+      "Phone": "anonymous",
+      "RewardPoints": 0
+    },
+    "404-444-5555": {
+      "Phone": "404-444-5555",
+      "RewardPoints": 95
+    }
+  }
+}
